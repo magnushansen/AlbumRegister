@@ -4,7 +4,7 @@ namespace AlbumRegister.Models;
 
 public class Genre
 {
-    public long GenreId { get; set; }
+    public int GenreId { get; set; }
 
     [Required]
     [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]

@@ -28,11 +28,11 @@ public class Album
     public string? Group { get; set; }
 
     [Required]
-    [Range(1, long.MaxValue, ErrorMessage = "Please select a genre")]
-    public long GenreId { get; set; }
+    [Range(1, int.MaxValue, ErrorMessage = "Please select a genre")]
+    public int GenreId { get; set; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Genre? Genre { get; set; }
 
-    public bool isShown { get; set; } = true;
+    public bool IsShown { get; set; } = true;
 }

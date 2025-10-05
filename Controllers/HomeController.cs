@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using AlbumRegister.Models;
 using AlbumRegister.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 
 namespace AlbumRegister.Controllers;
 
@@ -35,7 +34,7 @@ public class HomeController : Controller
             albums = albums.Where(x => x.Genre!.GenreName == albumGenre);
         }
 
-        albums = albums.Where(a => a.isShown);
+        albums = albums.Where(a => a.IsShown);
 
         var totalItems = albums.Count();
 
@@ -62,7 +61,7 @@ public class HomeController : Controller
 
 
 
-    public async Task<IActionResult> Details(long id)
+    public async Task<IActionResult> Details(int id)
     {
         Album? a = await context.Albums
             .Include(c => c.Genre)

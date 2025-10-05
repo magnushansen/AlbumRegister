@@ -14,7 +14,7 @@ namespace AlbumRegister.Data
         {
         }
 
-        public DbSet<Album> Album { get; set; } = default!;
+        //public DbSet<Album> Album { get; set; } = default!;
         public DbSet<Album> Albums => Set<Album>();
         public DbSet<Genre> Genres => Set<Genre>();
 

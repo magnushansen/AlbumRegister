@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AlbumRegister.Data;
-using System;
-using System.Linq;
+
 
 namespace AlbumRegister.Models;
 
@@ -14,7 +13,7 @@ public static class SeedData
             serviceProvider.GetRequiredService<
                 DbContextOptions<AlbumContext>>()))
         {
-            if (context.Album.Any() || context.Genres.Any())
+            if (context.Albums.Any() || context.Genres.Any())
             {
                 return;   
             }
@@ -41,7 +40,7 @@ public static class SeedData
                     Artist = "Billie Eilish",
                     Group = "Billie Eilish",
                     Genre = g1,
-                    isShown = false
+                    IsShown = false
                 },
                 new Album
                 {

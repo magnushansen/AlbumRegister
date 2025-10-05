@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbumRegister.Migrations
 {
     [DbContext(typeof(AlbumContext))]
-    [Migration("20251004155616_Initial")]
+    [Migration("20251005182109_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -31,13 +31,16 @@ namespace AlbumRegister.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
-                    b.Property<long>("GenreId")
+                    b.Property<int>("GenreId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Group")
                         .IsRequired()
                         .HasMaxLength(60)
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsShown")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");
@@ -47,19 +50,16 @@ namespace AlbumRegister.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("isShown")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("AlbumId");
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Album");
+                    b.ToTable("Albums");
                 });
 
             modelBuilder.Entity("AlbumRegister.Models.Genre", b =>
                 {
-                    b.Property<long>("GenreId")
+                    b.Property<int>("GenreId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 

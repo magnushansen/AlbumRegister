@@ -104,7 +104,7 @@ public class HomeController : Controller
             return View("AlbumEditor", model);
         }
         return NotFound();
-        }
+    }
 
     [HttpPost]
     public async Task<IActionResult> Edit(

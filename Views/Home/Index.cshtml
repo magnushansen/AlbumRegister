@@ -9,13 +9,4 @@
     <description bg-color="info">This is an album library application. Browse and manage your favorite albums.</description>
 </div>
 
-
-@{
-    var albums = (IEnumerable<AlbumRegister.Models.Album>)Model.Albums;
-    var a = albums.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
-}
-
-@if (a != null)
-{
-    <partial name="_AlbumSummary" model="a" />
-}
+@await Component.InvokeAsync("AlbumFeatured");

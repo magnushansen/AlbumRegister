@@ -1,9 +1,5 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using AlbumRegister.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace AlbumRegister.Models;
 

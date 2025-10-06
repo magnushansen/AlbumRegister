@@ -16,7 +16,7 @@ public class AlbumFeatured : ViewComponent
     public IViewComponentResult Invoke()
     {
         var Albums = (IEnumerable<Album>)context.Albums;
-        Album a = Albums.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
+        Album? a = Albums.OrderBy(x => Guid.NewGuid()).FirstOrDefault();
         return View("/Views/Shared/_AlbumSummary.cshtml", a);
     }
 }

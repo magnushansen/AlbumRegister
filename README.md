@@ -13,7 +13,7 @@ ASP.NET Core 9.0 MVC web application for managing an album collection.
    dotnet run
    ```
 
-2. Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
+2. Open your browser and navigate to `https://localhost:7039` or `http://localhost:5267`
 
 The database will be created automatically with seed data on first run.
 

@@ -8,17 +8,12 @@ ASP.NET Core 9.0 MVC web application for managing an album collection.
 
 ## Running the Application
 
-1. Navigate to the project directory:
-   ```bash
-   cd AlbumRegister
-   ```
-
-2. Run the application:
+1. Run the application:
    ```bash
    dotnet run
    ```
 
-3. Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
+2. Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
 
 The database will be created automatically with seed data on first run.
 

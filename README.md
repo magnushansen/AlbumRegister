@@ -8,14 +8,19 @@ ASP.NET Core 9.0 MVC web application for managing an album collection.
 
 ## Running the Application
 
-1. Run the application:
+1. Create the database:
+   ```bash
+   dotnet ef database update
+   ```
+
+2. Run the application:
    ```bash
    dotnet run
    ```
 
-2. Open your browser and navigate to `https://localhost:7039` or `http://localhost:5267`
+3. Open your browser and navigate to `https://localhost:7039` or `http://localhost:5267`
 
-The database will be created automatically with seed data on first run.
+The database will be seeded automatically with initial data on first run.
 
 ## Technologies
 

@@ -36,8 +36,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// app.MapControllerRoute("pagination",
-//     "Albums/Page{albumPage}",
-//     new { Controller = "Home", action = "Album" });
-
 app.Run();
